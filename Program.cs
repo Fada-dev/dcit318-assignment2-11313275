@@ -28,7 +28,7 @@ namespace DCIT318Assignment2
                         break;
 
                     case "2":
-                        // To be implemented
+                        RunAbstractClassExample();
                         break;
 
                     case "3":
@@ -64,5 +64,35 @@ namespace DCIT318Assignment2
             Console.WriteLine("\nPress any key to return to the main menu...");
             Console.ReadKey();
         }
+
+
+        static void RunAbstractClassExample()
+        {
+            Console.Clear();
+            Console.WriteLine("Abstract Classes and Methods Demo:\n");
+
+            // Circle input
+            Console.Write("Enter radius of the circle: ");
+            double radius = double.Parse(Console.ReadLine());
+
+            // Rectangle input
+            Console.Write("Enter width of the rectangle: ");
+            double width = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter height of the rectangle: ");
+            double height = double.Parse(Console.ReadLine());
+
+            // Create objects
+            Shape circle = new Circle(radius);
+            Shape rectangle = new Rectangle(width, height);
+
+            // Display areas
+            Console.WriteLine($"\nCircle Area: {circle.GetArea():0.00}");
+            Console.WriteLine($"Rectangle Area: {rectangle.GetArea():0.00}");
+
+            Console.WriteLine("\nPress any key to return to the main menu...");
+            Console.ReadKey();
+        }
+
     }
 }
