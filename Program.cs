@@ -32,7 +32,7 @@ namespace DCIT318Assignment2
                         break;
 
                     case "3":
-                        // To be implemented
+                        RunInterfaceExample();   
                         break;
 
                     case "4":
@@ -93,6 +93,22 @@ namespace DCIT318Assignment2
             Console.WriteLine("\nPress any key to return to the main menu...");
             Console.ReadKey();
         }
+
+        static void RunInterfaceExample()
+        {
+            Console.Clear();
+            Console.WriteLine("Interface Demo:\n");
+
+            IMovable car = new Car();
+            IMovable bicycle = new Bicycle();
+
+            car.Move();        // Output: Car is moving
+            bicycle.Move();    // Output: Bicycle is moving
+
+            Console.WriteLine("\nPress any key to return to the main menu...");
+            Console.ReadKey();
+        }
+
 
     }
 }
